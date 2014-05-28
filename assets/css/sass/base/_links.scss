@@ -3,7 +3,6 @@
 
 .link--dark,
 %link--dark {
-    @include prefix(transition, all .2s ease-out);
     color: $base--text-color;
     &:hover,
     &:active,
@@ -14,7 +13,6 @@
 
 .link--inverted,
 %link--inverted {
-    @include prefix(transition, all .2s ease-out);
     color: #fff;
     &:hover,
     &:active,
@@ -25,7 +23,6 @@
 
 .link--bright,
 %link--bright {
-    @include prefix(transition, all .2s ease-out);
     color: $base--brand-color;
     &:hover,
     &:active,

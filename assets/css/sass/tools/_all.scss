@@ -1,20 +1,17 @@
 // Custom Functions
-@import 'functions/em-calc';
-@import 'functions/percentage';
-@import 'functions/grid-flex';
-@import 'functions/strip-units';
+@import 'functions/em-calc',
+        'functions/percentage',
+        'functions/grid-flex',
+        'functions/strip-units',
 
-// CSS3
-@import 'css3/font-face';
-@import 'css3/media-query-hidpi';
-@import 'css3/media-query';  
-@import 'css3/prefix';
-@import 'css3/transform';
-@import 'css3/transition';
+        'css3/font-face',
+        'css3/media-query-hidpi',
+        'css3/media-query',
+        'css3/prefix',
+        'css3/transform',
+        'css3/transition',
 
-//Addons
-@import 'addons/clearfix';
-@import 'addons/hide-text';
-@import 'addons/image-replacement';
-@import 'addons/image-retina'; 
-@import 'addons/prefixer';
+        'addons/clearfix',
+        'addons/hide-text',
+        'addons/image-replacement',
+        'addons/image-retina'; 

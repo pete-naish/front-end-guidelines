@@ -33,18 +33,3 @@
         width: percent(78px);
     }
 }
-
-.grid--narrow {
-    section {
-        margin-bottom: 20px;
-        border-bottom: 1px solid $base--border-color;
-        padding-bottom: 20px;
-    }
-}
-
-.grid--standard {
-    section + section {
-        border-top: 1px solid $base--border-color;
-        padding-top: 18px;
-    }
-}

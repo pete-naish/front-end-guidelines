@@ -7,15 +7,6 @@ html {
     font-size: ($base--font-size / 16px) +em; // [1]
     line-height: $base--line-height / $base--font-size; // [1]
     color: $base--text-color;
-    font-family: $freight-sans--medium;
-}
-
-.wrapper {
-    max-width: em(1024px);
-    margin: 0 auto;
-    @include media-query(tablet-up) {
-        padding: 0 30px;
-    }
 }
 
 li {

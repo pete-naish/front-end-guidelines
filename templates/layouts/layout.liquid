@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width" />
         <!-- Title block allowing child pages to override -->
-        <title>{% block title %}Royal Central School of Speech &amp; Drama{% endblock %}</title>
+        <title>{% block title %}Front End Guidelines{% endblock %}</title>
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
         <!-- Styles -->
         {{ "app.min.css" | asset_url | stylesheet_tag }}
@@ -13,7 +13,6 @@
         {% block styles %}{% endblock %}
     </head>
     {% block bodyclass %}<body>{% endblock %}
-        <div class="mobile-overlay"></div>
         {% include "header" %}        
         <!-- Content block, child page inject content -->
         {% block content %}{% endblock %}
@@ -22,7 +21,6 @@
         {% include "footer" %}
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.11.0.min.js"><\/script>')</script>
-        {{ "/vendor/jquery.bxslider.min.js" | asset_url | script_tag }}
         {{ "app.min.js" | asset_url | script_tag }}
     </body>
 </html>
