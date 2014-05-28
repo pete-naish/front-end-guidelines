@@ -1,0 +1,11 @@
+// Accessible image replacement
+
+@mixin image-replacement {
+    overflow: hidden;
+    &::before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+.nav--page-controls {
+    position: relative;
+}
+
+.nav--page-controls__prev,
+.nav--page-controls__next {
+    display: none;
+    background-color: rgba(255, 255, 255, .8);
+    a {
+        @extend %link--dark;
+        font-family: $fogerty--solid;
+        font-size: em(15px);
+        padding: 8px 15px;
+        display: block;
+    }
+    @include media-query(tablet-up) {
+        display: block;
+        position: absolute;
+    }   
+}
+
+.nav--page-controls__prev {
+    left: 0;
+    a::before {
+        @include central-icon(arrow-left);
+        color: $base--brand-color;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.nav--page-controls__next {
+    right: 0;
+    a::after {
+        @include central-icon(arrow-right);
+        color: $base--brand-color;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+}

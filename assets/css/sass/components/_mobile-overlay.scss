@@ -1,0 +1,13 @@
+.mobile-overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 51;
+    @include media-query(tablet-up) {
+        display: none !important;
+    }
+}

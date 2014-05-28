@@ -1,0 +1,41 @@
+.blockquote {
+    margin-bottom: 22px;
+    > p {
+        font-size: em(24px);
+        line-height: 1.2;
+        padding-bottom: 15px;
+        position: relative;
+        text-indent: 25px;
+        &::before,
+        &::after {
+            font-family: $fogerty--solid;
+            font-size: em(40px, 24px);
+            position: absolute;
+        }
+        &::before {
+            content: '“';
+            top: -3px;
+            text-indent: -25px;
+        }
+        &::after {
+            content: '”';
+            bottom: 2px;
+            text-indent: 5px;
+        }
+        @include media-query(tablet-up) {
+            text-indent: 30px;
+            padding-bottom: 20px;
+            &::before {
+                text-indent: -30px;
+            }
+            &::after {
+                text-indent: 10px;
+            }   
+        }
+    }
+    cite {
+        display: block;
+        font-style: normal;
+        font-size: em(14px);
+    }
+}

@@ -1,0 +1,16 @@
+.carousel--simple {
+    margin-bottom: 20px;
+    @include media-query(tablet-up) {
+        margin-bottom: 30px;
+    }
+}
+
+.carousel--simple__slide {
+    position: relative;
+    .no-js & + .carousel--simple__slide {
+        display: none;
+    }
+    a::after {
+        @extend %image-caption--auto;
+    }
+}

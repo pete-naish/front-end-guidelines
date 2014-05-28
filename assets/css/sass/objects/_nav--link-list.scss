@@ -1,0 +1,104 @@
+.nav--link-list,
+%nav--link-list {
+    @extend %nav--link-list__separated;
+    a {
+        @include prefix(text-shadow, 0 0 1px rgba($base--text-color, .2));
+        @extend %link--dark;
+        font-family: $fogerty--solid;
+        display: block;
+        padding: 8px 20px;
+        width: 100%;
+        &:hover,
+        &:active,
+        &:focus {
+            @include prefix(text-shadow, 0 0 1px rgba($base--brand-color, .2));
+        }
+    }
+}
+
+.nav--link-list__separated,
+%nav--link-list__separated {
+    li a {
+        border-top: 1px solid $base--border-color;
+        @include media-query(tablet-up) {
+            border-top: 0;
+        }
+    }
+}
+
+.nav--link-list__small,
+%nav--link-list__small {
+    a {
+        @extend %link--dark;
+        font-size: em(12px);
+        margin: 0 20px;
+        padding: 5px 0;
+        display: block;
+        @include media-query(tablet-up) {
+            margin: 0;
+        }
+    }
+    li + li a {
+        border-top: 1px solid $base--border-color;
+    }
+}
+
+.nav--link-list__tight,
+%nav--link-list__tight {
+    @extend %nav--link-list;
+    ul {
+        padding: 6px 0;
+    }
+    @include media-query(tablet-up) {
+        a {
+            line-height: 1;
+            padding: 4px 20px;
+        }
+    }
+}
+
+.nav--link-list__tiny,
+%nav--link-list__tiny {
+    @extend %nav--link-list__small;
+    @include media-query(tablet-up) {
+        a {
+            @include prefix(text-shadow, 0 0 1px rgba($base--text-color, .2));
+            font-family: $fogerty--solid;
+            display: block;
+            width: 100%;
+            font-size: em(14px);
+            line-height: 1;
+            padding: 4px 0;
+            border: 0 !important;
+            &:hover,
+            &:active,
+            &:focus {
+                @include prefix(text-shadow, 0 0 1px rgba($base--brand-color, .2));
+            }
+        }
+    }
+}
+
+.nav--link-list__split,
+%nav--link-list__split {
+    li:first-child a {
+        border-top: 1px solid $base--border-color;
+        @include media-query(tablet-up) {
+            border-top: 0;
+        }
+    }
+}
+
+.nav--link-list__article,
+%nav--link-list__article {
+    a {
+        @extend %link--bright;
+        font-family: $fogerty--solid;
+        display: block;
+        width: 100%;
+        line-height: 1;
+        border: 0 !important;
+        font-size: em(16px);
+        padding: 6px 0;
+    }
+}

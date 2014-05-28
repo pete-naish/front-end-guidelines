@@ -1,0 +1,43 @@
+
+// #HEADINGS
+// Heading-level styling
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-family: $fogerty--solid;
+    a {
+        @extend %link--bright;
+    }
+}
+
+h1 {
+    font-size: em(30px);
+    @include media-query(tablet-up) {
+        font-size: em(40px);
+    }
+}
+
+h2 {
+    font-size: em(18px);
+}
+
+h3 {
+    font-size: em(16px);
+}
+
+h4 {
+    font-size: em(14px);
+}
+
+h5 {
+    font-size: em(12px);
+}
+
+h6 {
+    font-size: em(10px);
+}

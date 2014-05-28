@@ -1,0 +1,65 @@
+@media print {
+    *,
+    a {
+        color: $base--text-color !important;
+        background-color: #fff !important;
+        border: 0 !important;
+        &::before,
+        &::after {
+            content: "" !important;
+        }
+    }
+    .accordion__content {
+        display: block !important;
+    }
+    .nav-wrapper,
+    .nav-wrapper__toggle,
+    .wrapper--accordion__toggle img,
+    .button--close,
+    .accordion__toggle::after,
+    .carousel--primary,
+    .carousel--secondary,
+    .carousel--simple,
+    .pagination,
+    .media-header .media-header__image,
+    .nav--page-controls,
+    .theme-header .accordion--horizontal,
+    .grid--narrow,
+    .contact-info a,
+    .social-links--small,
+    .theme__block--image,
+    .listing--standard img,
+    .pdf-link,
+    .cta-list--huge,
+    iframe,
+    form {
+        display: none !important;
+    }
+    img {
+        max-width: 50%;
+    }
+    a::after {
+        content: "url "attr(href) !important;
+        margin-left: 10px;
+        color: #ccc;
+        font-family: arial;
+        font-weight: normal;
+        font-size: 12px;
+        text-transform: lowercase;
+    }
+    .logo {
+        padding-top: 0;
+        margin: 0 0 0 20px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .theme__row.theme__row--switched h2 {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+    }
+    .accordion--rich .accordion__content.open,
+    .accordion--rich .accordion__toggle.open {
+        background-color: #fff !important;
+    }
+}

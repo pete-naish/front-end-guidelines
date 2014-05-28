@@ -1,0 +1,21 @@
+{% block content %}
+{% include "breadcrumb__course" %}
+{% include "media-header__course" %}
+<div class="grid-container">
+    <div class="grid--standard">
+        {% include "rte--course__sidebar" %}
+        {% include "listing--small__course" %}
+    </div>
+    <div class="grid--wide">
+        {% include "rte--course" %}
+        {% include "course-accordion--course" %}
+        {% include "news-events--course" %}
+        {% comment %}news and events{% endcomment %}
+    </div>
+    <div class="grid--narrow">
+        {% include "drama-accreditation" %}
+        {% include "cta--tiny" %}
+        {% include "social-links" %}
+    </div>
+</div>
+{% endblock %}

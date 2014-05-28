@@ -1,0 +1,24 @@
+.site-error {
+    margin: 0 -20px 60px;
+    h1 {
+        @extend %heading--bold;
+        margin-bottom: 15px;
+    }
+    h2 {
+        font-size: em(22px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    p {
+        font-size: em(18px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    a {
+        font-family: $fogerty--solid;
+        font-size: em(16px, 18px);
+    }
+    @include media-query(tablet-up) {
+        margin: 0 0 60px;
+    }
+}

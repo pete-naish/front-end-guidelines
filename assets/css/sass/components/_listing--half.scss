@@ -1,0 +1,23 @@
+.listing--half {
+    width: 50%;
+    float: left;
+    li {
+        border: 0;
+        &:last-child a {
+            font-size: em(14px);
+        }
+    }
+    h2 {
+        font-size: em(22px);
+    }
+    a {
+        padding-right: 20px;
+    }
+    .listing--standard__items {
+        margin-bottom: 0;
+    }
+    + .listing--half {
+        border-left: 1px solid $base--border-color;
+        padding-left: 20px;
+    }
+}

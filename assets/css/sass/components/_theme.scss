@@ -1,0 +1,187 @@
+.theme {
+    margin-bottom: 40px;
+}
+
+.theme__row {
+    margin-bottom: 2px;
+    overflow: hidden;
+    background-color: $base--background-color;
+    h2 {
+        font-size: em(22px);
+        padding: 15px 20px 10px;
+    }
+    @include media-query(tablet-up) {
+        position: relative;
+        h2 {
+            max-width: 50%;
+            &.accordion__toggle {
+                padding: 15px 20px 10px;
+            }
+        }
+        &.theme__row--switched {
+            h2 {
+                margin-left: 50%;
+            }
+        }
+    }
+}
+
+.theme__block--text {
+    padding: 0 20px;
+    overflow: hidden;
+    p {
+        margin-bottom: 10px;
+    }
+    a {
+        @extend %link--bright;
+        display: block;
+        font-family: $fogerty--solid;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+    @include media-query(tablet-up) {
+        min-height: 210px;
+        float: left;
+        width: 50%;
+        border-right: 1px solid #fff;
+        .theme__row--switched & {
+            float: right;
+            border-right: 0;
+            border-left: 1px solid #fff;
+        }
+    }
+}
+
+.theme__block--image {
+    background-repeat: no-repeat;
+    background-position: -9999px;
+    img {
+        margin: 0 auto;
+    }
+    @include media-query(tablet-up) {
+        border-left: 1px solid #fff;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        background-position: 50%;
+        img {
+            display: none;
+        }
+        .theme__row--switched & {
+            border-left: 0;
+            border-right: 1px solid #fff;
+            right: auto;
+            left: 0;
+        }
+    }
+}
+
+.theme__block--video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    iframe {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @include media-query(tablet-up) {
+        float: left;
+        width: 50%;
+        border-right: 1px solid #fff;
+        .theme__row--switched & {
+            float: right;
+            border-right: 0;
+            border-left: 1px solid #fff;
+        }
+    }
+}
+
+.theme__block--text-alpha,
+.theme__block--text-beta {
+    padding: 15px 20px 10px;
+    overflow: hidden;
+    h2 {
+        margin-bottom: 6px;
+        padding: 0;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    a {
+        font-family: $fogerty--solid;
+        margin-bottom: 5px;
+        line-height: 1.2;
+        font-size: em(22px);
+        float: left;
+        clear: left;
+        &::before {
+            @include central-icon(arrow-right);
+            color: $base--brand-color;
+            font-size: em(12px);
+            margin-right: 10px;
+        }
+    }
+    @include media-query(tablet-up) {
+        float: left;
+        width: 50%;
+    }   
+}
+
+.theme__block--text-alpha {
+    background-color: #151515;
+    h2 {
+        color: #999;
+    }
+    a {
+        @extend %link--inverted;
+    }
+    @include media-query(tablet-up) {
+        border-right: 1px solid #fff;
+    }   
+}
+
+.theme__block--text-beta {
+    background-color: $base--border-color;
+    h2 {
+        color: #666;
+    }
+    a {
+        @extend %link--dark;
+    }
+    @include media-query(tablet-up) {
+        border-left: 1px solid #fff;
+    }
+}
+
+.theme__block--listing {
+    background-color: #fff;
+    .listing--standard__items {
+        padding: 0 20px;
+        margin-bottom: 0;
+        li {
+            border-bottom: 0;
+            margin-bottom: 0;
+            &:last-child a {
+                font-size: em(14px);
+            }
+        }
+    }
+    + .theme__block--listing {
+        border-top: 1px solid $base--border-color;
+    }
+    @include media-query(tablet-up) {
+        float: left;
+        width: 50%;
+        + .theme__block--listing {
+            border-top: 0;
+            .listing--standard__items {
+                border-left: 1px solid $base--border-color;
+            }
+        }
+    }
+}

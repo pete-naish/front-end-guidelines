@@ -1,0 +1,60 @@
+.rte,
+%rte {
+    margin-bottom: 30px;
+    overflow: hidden;
+    h1 {
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
+    h2 {
+        margin-top: 5px;
+        float: left;
+        clear: both;
+        width: 100%;
+        font-size: em(22px);
+    }
+    h3 {
+        margin-top: 4px;
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    img {
+        margin-bottom: 20px;
+    }
+    ul,
+    ol {
+        margin: 0 40px 20px;
+    }
+    ul li {
+        list-style: disc;
+    }
+    ol li {
+        list-style: decimal;
+    }
+    li a {
+        @extend %link--bright;
+    }
+    td {
+        margin: 0;
+        padding: 0 15px 10px 0;
+    }
+    .grid--standard & {
+        margin-bottom: 15px;
+        h3:last-child {
+            margin-bottom: 6px;
+        }
+    }
+    @include media-query(tablet-up) {
+        p:first-child {
+            font-size: em(18px);
+        }   
+    }
+}
+
+iframe[src*="soundcloud"] {
+    margin: 10px 0 20px;
+}

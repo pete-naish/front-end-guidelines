@@ -1,0 +1,42 @@
+@charset 'UTF-8';
+
+// APP.SCSS
+
+// Here we start to pull everything together into one big stylesheet.
+// SETUP............Settings, tools, mixins, etc.
+// GENERIC..........normalize.css, reset, shared styles, etc.
+// BASE.............Basic HTML elements.
+// OBJECTS..........Objects, abstractions, design patterns.
+// COMPONENTS.......Components and modules.
+// TRUMPS...........Helpers, overrides, ‘trump-cards’.
+
+// #SETUP
+// Settings, variables and tools.
+
+@import 'settings/all',
+        'tools/all';
+
+// #GENERIC
+// These are far reaching styles that affect and underpin every element on the page, e.g. `* {}`.
+ 
+@import 'generic/all';
+
+// #BASE
+// These are base HTML elements, things with no classes on them, e.g. `h1 {}`, `blockquote {}`.
+ 
+@import 'base/all';
+
+// #OBJECTS
+// These are design-free objects, abstractions and design patterns. These create constructs that you lay your designs over.
+ 
+@import 'objects/all';
+
+// #COMPONENTS
+// These are your components and modules; things like buttons, accordions, carousels, etc.
+ 
+@import 'components/all';
+
+// #TRUMPS
+// These are helper classes and overrides that should take precedence over all other styles, e.g. `.float--left {}`.
+ 
+@import 'trumps/all';

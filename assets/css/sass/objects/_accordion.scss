@@ -1,0 +1,47 @@
+.accordion__toggle,
+%accordion__toggle {
+    @extend %link--dark;
+    font-family: $fogerty--solid;
+    display: block;
+    padding: 8px 20px;
+    width: 100%;
+    cursor: pointer;
+    &:hover,
+    &:active,
+    &:focus {
+        @include prefix(text-shadow, 0 0 1px rgba($base--brand-color, .2));
+    }
+    &::after {
+        @include central-icon(arrow-down);
+        color: $base--brand-color;
+        float: right;
+        margin-top: 5px;
+    }
+    &.open::after {
+        @include central-icon(arrow-up);
+    }
+    .no-js &::after {
+        display: none;
+    }
+}
+
+.accordion--mobile-only,
+%accordion--mobile-only {
+    @include media-query(tablet-up) {
+        .accordion__toggle {
+            cursor: text;
+            padding: 8px 10px;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $base--text-color;
+            }
+            &::after {
+                display: none;
+            }
+        }
+        .accordion__content {
+            display: block !important;
+        }
+    }
+}

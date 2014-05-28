@@ -1,0 +1,82 @@
+// #TYPE
+
+@import '../tools/css3/font-face';
+
+@include font-face(central, '../type/central');
+@include font-face(freight-sans--medium, '../type/freight-sans--medium');
+@include font-face(fogerty--solid, '../type/fogerty--solid');
+
+$freight-sans--medium: 'freight-sans--medium', serif;
+$fogerty--solid: 'fogerty--solid', sans-serif;
+
+@mixin central-icon($icon-name) {
+    font-family: 'central' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @if $icon-name == arrow-up {
+        content: 'u';
+    }
+
+    @if $icon-name == arrow-right {
+        content: 'r';
+    }
+
+    @if $icon-name == arrow-down {
+        content: 'd';
+    }
+
+    @if $icon-name == arrow-left {
+        content: 'l';
+    }
+
+    @if $icon-name == burger {
+        content: 'b';
+    }
+
+    @if $icon-name == close {
+        content: 'x';
+    }
+
+    @if $icon-name == search {
+        content: 's';
+    }
+
+    @if $icon-name == facebook {
+        content: 'f';
+    }
+
+    @if $icon-name == twitter {
+        content: 't';
+    }
+
+    @if $icon-name == youtube {
+        content: 'y';
+    }
+
+    @if $icon-name == google {
+        content: 'g';
+    }
+
+    @if $icon-name == linkedin {
+        content: 'i';
+    }
+
+    @if $icon-name == pdf {
+        content: '@';
+    }
+
+    @if $icon-name == email {
+        content: 'e';
+    }
+
+    @if $icon-name == pinterest {
+        content: 'p';
+    }
+}

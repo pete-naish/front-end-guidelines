@@ -1,0 +1,42 @@
+{% block content %}
+{% include "banner--alert" %}
+{% include "breadcrumb" %}
+{% include "media-header" %}
+{% include "media-header--alt" %}
+{% include "carousel--simple" %}
+{% include "theme-header" %}
+{% include "theme" %}
+<div class="grid-container">
+    <div class="grid--wide">
+        {% include "rte--profile" %}
+        {% include "rte--event" %}
+        {% include "rte" %}
+        {% include "form--standard" %}
+        {% include "course-accordion" %}
+        {% include "carousel--primary" %}
+        {% include "filter--dropdown" %}
+        {% include "filter--checkbox" %}
+        {% include "listing--standard" %}
+        {% include "pagination" %}
+        {% include "site-error" %}
+    </div>
+    <div class="grid--standard">
+        {% include "blockquote" %}
+        {% include "rte--profile__sidebar" %}
+        {% include "rte--profile__pdf-link" %}
+        {% include "rte--event__sidebar" %}
+        {% include "listing--cast" %}
+        {% include "listing--small" %}
+    </div>
+    <div class="grid--narrow">
+        {% include "drama-accreditation" %}
+        {% include "cta--tiny" %}
+        {% include "social-links" %}
+    </div>
+</div>
+{% include "page-leads" %}
+{% include "filter--course" %}
+{% include "cta-list--huge" %}
+{% include "listing--profile" %}
+{% include "carousel--secondary" %}
+{% endblock %}

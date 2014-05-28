@@ -1,0 +1,49 @@
+.block--standout {
+    margin: 0 0 30px;
+    h1 {
+        @extend %heading--bold;
+        float: left;
+        clear: left;
+    }
+    p {
+        padding: 10px 20px 0;
+    }
+    .block--standout__description {
+        background-color: #414141;
+        color: #fff;
+        clear: left;
+        margin-bottom: 2px;
+        padding: 12px 20px;
+        @include media-query(tablet-up) {
+            float: left;
+        }
+    }
+    .inner-wrapper--block--standout {
+        background-color: $base--background-color;
+        border-bottom: 4px solid $base--brand-color;
+        overflow: hidden;
+        clear: left;
+    }
+    .accordion__content {
+        padding: 0 20px 20px;
+        overflow: hidden;
+    }
+    legend,
+    .accordion__toggle {
+        font-family: $fogerty--solid;
+        display: block;
+        padding: 8px 20px;
+        width: 100%;
+    }
+    .grid-container & {
+        margin: 0 -20px 30px;
+    }
+    @include media-query(tablet-up) {
+        legend {
+            padding: 8px 20px;
+        }
+        .grid-container & {
+            margin: 0 0 30px;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+$base--heading-margin: 34px;
+
+.media-header {
+    margin-bottom: 30px;
+    @include media-query(tablet-up) {
+        .accordion__toggle {
+            display: none;
+        }
+        .nav--secondary__menu {
+            width: 33.3%;
+            float: left;
+        }
+    }
+}
+
+.media-header__container {
+    position: relative;
+    border-bottom: 4px solid $base--brand-color;
+}
+
+.media-header__title {
+    h1 {
+        @extend %heading--bold;
+    }
+    @include media-query(tablet-up) {
+        width: 100%;
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+.media-header__image {
+    position: relative;
+    display: block;
+    &::after {
+        @extend %image-caption--auto;
+    }
+    @include media-query(tablet-up) {
+        padding-top: $base--heading-margin;
+    }
+}
+
+.media-header__video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    margin-bottom: $base--heading-margin;
+    height: 0;
+    iframe {
+        position: absolute;
+        top: $base--heading-margin;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.media-header__caption {
+    color: #fff;
+    padding: 16px 20px 0;
+    margin: 2px 0;
+    overflow: hidden;
+    background-color: rgba(21, 21, 21, 1);
+    p {
+        margin-bottom: 16px;
+    }
+    @include media-query(tablet-up) {
+        margin: 0;
+        margin-bottom: 20px;
+        max-width: 50%;
+        background-color: rgba(21, 21, 21, .8);
+    }
+    @include media-query(730px) {
+        max-width: 100%;
+    }
+}
+
+.media-header__caption-date {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.media-header__caption-links {
+    overflow: hidden;
+    margin-bottom: 14px;
+    @include media-query(tablet-up) {
+        margin-bottom: 20px;
+        li {
+            float: left;
+            line-height: 1;
+            + li {
+                padding-left: 10px;
+                margin-left: 10px;
+                border-left: 1px solid #fff;
+            }
+        }
+    }
+    a {
+        @extend %link--inverted;
+        font-size: 18px;
+        font-family: $fogerty--solid;
+        text-transform: uppercase;
+    }
+}
+
+.media-header__cta {
+    @extend %link--bright;
+    display: none;
+    font-family: $fogerty--solid;
+    font-size: em(14px);
+    @include media-query(tablet-up) {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 12;
+    }
+}

@@ -1,0 +1,50 @@
+.grid-container {
+    @include clearfix();
+    margin: 0 auto;
+    max-width: em(1024px);
+    padding: 0 20px;
+    @include media-query(tablet-up) {
+        padding: 0 30px;
+    }
+}
+
+@include media-query(tablet-up) {
+    .grid--wide,
+    .grid--standard,
+    .grid--narrow {
+        display: inline;
+        float: left;
+    }
+    .grid--wide,
+    .grid--standard {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .grid--narrow {
+        padding-left: 20px;
+    }
+    .grid--wide {
+        width: percent(637px);
+    }
+    .grid--standard {
+        width: percent(249px);
+    }
+    .grid--narrow {
+        width: percent(78px);
+    }
+}
+
+.grid--narrow {
+    section {
+        margin-bottom: 20px;
+        border-bottom: 1px solid $base--border-color;
+        padding-bottom: 20px;
+    }
+}
+
+.grid--standard {
+    section + section {
+        border-top: 1px solid $base--border-color;
+        padding-top: 18px;
+    }
+}

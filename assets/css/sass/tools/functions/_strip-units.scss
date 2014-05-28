@@ -1,0 +1,5 @@
+// Strip the unit from a number (e.g. 18px --> 18).
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}

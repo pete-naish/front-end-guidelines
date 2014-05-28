@@ -1,0 +1,92 @@
+.nav-wrapper__toggle {
+    @extend %button--naked;
+    @include prefix(transition, all .2s ease-out);
+    width: 100%;
+    border-top: 1px solid $base--border-color;
+    text-transform: uppercase;
+    line-height: em(40px);
+    &::before {
+        @include central-icon(burger);
+        display: inline-block;
+        vertical-align: -1px;
+        margin-right: 6px;
+    }
+    &.open::before {
+        @include central-icon(close);
+        font-size: em(12px);
+        margin-right: 5px;
+        vertical-align: 0;
+    }
+    .no-js & {
+        &:hover,
+        &:active,
+        &:focus {
+            + .nav-wrapper {
+                color: $base--brand-color;
+                top: 100%;
+            }
+        }   
+    }
+    @include media-query(tablet-up) {
+        display: none;
+    }
+}
+
+.nav-wrapper {
+    position: absolute;
+    width: 100%;
+    top: -9999px;
+    &:hover,
+    &:active,
+    &:focus,
+    &.open {
+        top: 100%;
+    }
+    @include media-query(tablet-up) {
+        position: static;
+    }
+}
+
+.nav--primary {
+    @extend %nav--link-list;
+    border-top: 1px solid $base--border-color;
+    ul {
+        @include prefix(box-shadow, 0 3px 3px -2px rgba(0, 0, 0, .25) inset);
+        background-color: $base--background-color;
+        @include media-query(tablet-up) {
+            @include prefix(box-shadow, none);
+            background: none;
+            display: table;
+            table-layout: fixed;
+        }
+    }
+    li {
+        list-style: none;
+        @include media-query(tablet-up) {
+            display: table-cell;
+            padding: 12px 18px;
+            padding-bottom: 0;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+    @include media-query(tablet-up) {
+        border-bottom: 1px solid $base--border-color;
+        .no-nav-border & {
+            border-bottom: 0;
+        }
+        a {
+            padding: 0;
+            padding-bottom: 8px;
+            border-bottom: 4px solid #fff;
+            line-height: 1;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $base--text-color;
+                border-bottom: 4px solid $base--brand-color;
+            }
+        }
+    }
+}

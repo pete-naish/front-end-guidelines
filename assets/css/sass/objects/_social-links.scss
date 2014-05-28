@@ -1,0 +1,45 @@
+.social-links,
+%social-links {
+    margin: 10px 0;
+    overflow: hidden;
+    a {
+        @include image-replacement();
+        @extend %link--bright;
+        display: block;
+        &.service-links-facebook {
+            &::before {
+                @include central-icon(facebook);
+            }
+        }
+        &.service-links-twitter {
+            &::before {
+                @include central-icon(twitter);
+            }
+        }
+        &.service-links-youtube {
+            &::before {
+                @include central-icon(youtube);
+            }
+        }
+        &.service-links-pinterest {
+            &::before {
+                @include central-icon(pinterest);
+            }
+        }
+        &.service-links-google-plus {
+            &::before {
+                @include central-icon(google);
+            }
+        }
+        &.service-links-linkedin {
+            &::before {
+                @include central-icon(linkedin);
+            }
+        }
+        &.service-links-printmail {
+            &::before {
+                @include central-icon(email);
+            }
+        }
+    }
+}

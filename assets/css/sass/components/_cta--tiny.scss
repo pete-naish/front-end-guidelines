@@ -1,0 +1,9 @@
+.cta--tiny {
+    a {
+        @extend %link--bright;
+        font-family: $fogerty--solid;
+        font-size: em(12px);
+        display: block;
+        line-height: 1.4;
+    }
+}

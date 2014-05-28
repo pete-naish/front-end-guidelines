@@ -1,0 +1,29 @@
+.banner--alert {
+    background-color: $base--background-color__dark;
+    padding: 16px 20px;
+    .wrapper {
+        position: relative;
+    }
+    h2 { 
+        margin-bottom: 0;
+    }
+    @include media-query(tablet-up) {
+        padding: 16px 0;
+    }
+}
+
+.button--close {
+    @extend %button--naked__no-text;
+    @extend %link--bright;
+    font-family: $fogerty--solid;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: em(16px);
+    .no-js & {
+        display: none;
+    }
+    @include media-query(tablet-up) {
+        right: 50px;
+    }
+}

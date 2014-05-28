@@ -1,0 +1,92 @@
+.carousel--secondary {
+    background-color: $base--background-color;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    overflow: hidden;
+    .wrapper {
+        position: relative;
+        padding: 0 em(20px);
+        @include media-query(tablet-up) {
+            padding: 0 em(30px);
+        }
+    }
+    h2 {
+        line-height: 1.2;
+        margin-bottom: 18px;
+        margin-right: 50px;
+    }
+    p {
+        margin-bottom: 20px;
+        clear: left;
+        @include media-query(tablet-up) {
+            max-width: 75%;
+        }
+    }
+    .bx-viewport {
+        margin-bottom: 20px;
+    }
+    .bx-prev,
+    .bx-next {
+        @include image-replacement();
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 18px;
+        top: 0;
+        &::after {
+            @extend %link--bright;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    .bx-prev {
+        right: 50px;
+        &::after {
+            @include central-icon(arrow-left);
+        }
+        @include media-query(tablet-up) {
+            right: 60px;
+        }
+    }
+    .bx-next {
+        right: 20px;
+        &::after {
+            @include central-icon(arrow-right);
+        }
+        @include media-query(tablet-up) {
+            right: 30px;
+        }
+    }
+    @include media-query(tablet-up) {
+        margin-bottom: 30px;
+    }
+}
+
+.carousel--secondary__slides {
+    margin-bottom: 20px;
+}
+
+.carousel--secondary__slide {
+    width: 137px;
+    height: 138px;
+    background: #fff;
+    display: table;
+    a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    img {
+        margin: auto;
+    }
+    .no-js & {
+        float: left;
+        margin: 0 8px 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

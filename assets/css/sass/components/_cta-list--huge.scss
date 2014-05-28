@@ -1,0 +1,34 @@
+.cta-list--huge {
+    margin-bottom: 30px;
+    a {
+        @extend %link--dark;
+        display: block;
+        background-color: $base--background-color;
+        font-family: $fogerty--solid;
+        font-size: em(22px);
+        padding: 11px 20px;
+        line-height: 1.2;
+        overflow: hidden;
+        &::after {
+            @include central-icon(arrow-right);
+            font-size: em(20px, 22px);
+            color: $base--brand-color;
+            float: right;
+            margin-top: 4px;
+        }
+    }
+    li + li a {
+        margin-top: 2px;
+    }
+    @include media-query(tablet-up) {
+        a {
+            font-size: em(28px);
+            padding: 14px 20px;
+            &::after {
+                @include central-icon(arrow-right);
+                font-size: em(20px, 28px);
+                margin-top: 5px;
+            }
+        }
+    }
+}

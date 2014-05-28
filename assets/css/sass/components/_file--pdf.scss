@@ -1,0 +1,27 @@
+.pdf-link {
+    @include clearfix();
+    margin-bottom: 26px;
+}
+
+.file--pdf {
+    @extend %file;
+    margin-top: 10px;
+    &::after {
+        @include prefix(transition, all .2s ease-out);
+        content: 'PDF';
+        position: absolute;
+        left: -5px;
+        top: 10px;
+        padding: 1px 2px;
+        line-height: 1;
+        background-color: $base--brand-color;
+        color: #fff;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        &::after {
+            background-color: $base--text-color;
+        }
+    }
+}

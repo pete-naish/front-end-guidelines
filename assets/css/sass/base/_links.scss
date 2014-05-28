@@ -1,0 +1,39 @@
+// #LINKS
+// Main link styling
+
+.link--dark,
+%link--dark {
+    @include prefix(transition, all .2s ease-out);
+    color: $base--text-color;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $base--brand-color;
+    }
+}
+
+.link--inverted,
+%link--inverted {
+    @include prefix(transition, all .2s ease-out);
+    color: #fff;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $base--brand-color;
+    }
+}
+
+.link--bright,
+%link--bright {
+    @include prefix(transition, all .2s ease-out);
+    color: $base--brand-color;
+    &:hover,
+    &:active,
+    &:focus {
+        color: $base--text-color;
+    }
+}
+
+p a {
+    @extend %link--bright;
+}

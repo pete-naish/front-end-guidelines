@@ -1,0 +1,57 @@
+<section class="form--standard">
+    <h1>Standard form</h1>
+    <form action="#">
+        <p>Fields marked with an asterisk are mandatory</p>
+        <p class="alert--error">Your passwords do not match</p>
+        <div class="field-wrapper">
+            <label for="input--text">Text input</label>
+            <input type="text" name="input--text" id="input--text">
+        </div>
+        <div class="field-wrapper error">
+            <label for="input--text__error" class="error">Text input with error</label>
+            <input type="text" name="input--text__error" id="input--text__error" class="error">
+        </div>
+        <div class="field-wrapper">
+            <label for="input--password">Password input</label>
+            <input type="password" name="input--password" id="input--password">
+        </div>
+        <div class="field-wrapper">
+            <label for="textarea">Textarea</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div class="field-wrapper">
+            <label for="select">Select</label>
+            <select name="select" id="select">
+                <option value="">Please select</option>
+            </select>
+        </div>
+        <div class="fieldset-wrapper">
+            <div class="field-wrapper">
+                <input type="checkbox" name="checkbox1" id="checkbox1">
+                <label for="checkbox1">Checkbox 1 label</label>
+            </div>
+            <div class="field-wrapper">
+                <input type="checkbox" name="checkbox2" id="checkbox2">
+                <label for="checkbox2">Checkbox 2 label</label>
+            </div>
+            <div class="field-wrapper">
+                <input type="checkbox" name="checkbox3" id="checkbox3">
+                <label for="checkbox3">Checkbox 3 label</label>
+            </div>
+        </div>
+        <div class="fieldset-wrapper">
+            <div class="field-wrapper">
+                <input type="radio" name="radio" id="radio1">
+                <label for="radio1">Radio 1 label</label>
+            </div>
+            <div class="field-wrapper">
+                <input type="radio" name="radio" id="radio2">
+                <label for="radio2">Radio 2 label</label>
+            </div>
+            <div class="field-wrapper">
+                <input type="radio" name="radio" id="radio3">
+                <label for="radio3">Radio 3 label</label>
+            </div>
+        </div>
+    </form>
+</section>

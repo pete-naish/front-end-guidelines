@@ -1,0 +1,187 @@
+.nav--utility {
+    li {
+        list-style: none;
+        @include media-query(tablet-up) {
+            float: left;
+        }
+    }
+    @include media-query(tablet-up) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $base--background-color;
+    }
+}
+
+.nav--utility__menu {
+    a {
+        @extend %link--dark;
+        font-size: em(14px);
+        background-color: $base--background-color;
+        display: block;
+        padding: 8px 20px;
+        @include media-query(tablet-up) {
+            font-size: em(13px);
+            padding: 0;
+            padding-top: 10px;
+            padding-bottom: 6px;
+            border-bottom: 4px solid $base--background-color;
+            line-height: 1;
+            &:hover,
+            &:active,
+            &:focus {
+                color: $base--text-color;
+                border-bottom: 4px solid $base--brand-color;
+            }
+        }
+    }
+    li + li a {
+        border-top: 1px solid $base--border-color;
+        @include media-query(tablet-up) {
+            border-top: 0;
+        }
+    }
+    .search--global + li a {
+        border-top: 0;
+    }
+    @include media-query(tablet-up) {
+        float: right;
+        > ul > li {
+            margin: 0 7px;
+        }
+    }
+}
+
+.nav--utility__menu .dropdown--desktop {
+    background: $base--background-color;
+    @include media-query(tablet-up) {
+        position: relative;
+        > a::after {
+            @include central-icon(arrow-down);
+            color: $base--brand-color;
+            float: right;
+            margin-left: 6px;
+        }       
+        &:hover,
+        &:active,
+        &:focus {
+            > a {
+                border-bottom: 4px solid $base--brand-color;
+                &::after {
+                    @include central-icon(arrow-up);
+                }
+            }
+            .dropdown--desktop__content {
+                left: 0;
+            }
+        }
+        a:hover,
+        a:active,
+        a:focus {
+            + .dropdown--desktop__content {
+                left: 0;
+            }
+        }
+    }
+}
+
+.nav--utility__menu .dropdown--desktop__content {
+    margin: 0 40px;
+    li:first-child a {
+        border-top: 0;
+    }
+    a {
+        font-size: em(14px);
+        padding: 8px 0;
+    }
+    @include media-query(tablet-up) {
+        position: absolute;
+        left: -9999px;
+        width: 100%;
+        margin: 0;
+        li {
+            float: none;
+        }
+        a {
+            font-size: em(13px);
+            padding: 4px 7px;
+            margin: 0;
+            line-height: 1;
+            border: 0;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $base--background-color__dark;
+            }
+        }
+    }
+}
+
+.search--global {
+    background: #fff;
+    label {
+        @include hide-text();
+    }
+    .form-submit {
+        display: none;
+    }
+    @include media-query(tablet-up) {
+        float: right !important;
+        margin: 0 !important;
+        background: none;
+        .form-item {
+            float: left;
+            margin: 0;
+        }
+    }
+}
+
+.nav--utility .search--global__input,
+.nav--utility .search--global input[type=text] {
+    border: 0;
+    padding: 10px 20px;
+    width: 90%;
+    font-size: em(14px);
+    line-height: 1;
+    &::-webkit-input-placeholder {
+        color: $base--text-color;
+    }
+    &:-moz-placeholder {
+        color: $base--text-color;
+    }
+    &::-moz-placeholder {
+        color: $base--text-color;
+    }
+    &:-ms-input-placeholder {  
+        color: $base--text-color;
+    }
+    @include media-query(tablet-up) {
+        @include prefix(transition, all .2s ease-out);
+        background: none;
+        width: 80%;
+        font-size: em(13px);
+        padding: 9px 10px;
+        float: none;
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+            background-color: $base--background-color__dark;
+        }
+    }
+}
+
+.search--global__submit {
+    @extend %button--naked;
+    @extend %link--bright;
+    @include central-icon(search);
+    @include prefix(text-shadow, none);
+    color: $base--brand-color;
+    padding: 10px 0;
+    font-size: em(16px);
+    vertical-align: middle;
+    @include media-query(tablet-up) {
+        padding: 6px;
+    }
+}
