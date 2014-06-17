@@ -1,7 +1,7 @@
 #About this project
-This project introduces a comprehensive new style guide (CSS only, at the moment - HTML and JS to follow) and CSS architecture that front-end devs should use in all projects going forwards.
+This project introduces a comprehensive new style guide (CSS only, at the moment - HTML and JS to follow) and CSS architecture that **front-end devs should use in all projects going forwards**.
 
-Key benefits:
+####Key benefits:####
 
 Allows for mobile-first, component-based development, using the CSS cascade to full effect via the logical import order of CSS partials. This approach is backend-agnostic, which is great for company-wide consistency.
 
