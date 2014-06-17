@@ -1,9 +1,15 @@
 #About this project
-This project has been built with [Mixture](mixture.io) and [Sass](http://sass-lang.com/), and introduces a new style guide and CSS architecture that front-end devs should use in all projects going forwards. Using a consistent approach across all projects will greatly improve consistency, quality, maintainability, and scalability. 
+This project introduces a comprehensive new style guide (CSS only, at the moment - HTML and JS to follow) and CSS architecture that front-end devs should use in all projects going forwards.
 
-This readme explains the key components of the new architecture and style guide. This project is designed to be easy to modify, scale, evolve, and adapt, so your thoughts, concerns, and recommendations are appreciated (and requested). I don't want anyone to feel forced to use this, but it should be immediately apparent that this is a great way to work.
+Key benefits:
 
-Mixture is not required to use this style guide and CSS architecture, and it will work with Sass or Less. I've used Sass (and .scss) in the information below to refer to both Sass and Less.
+Allows for mobile-first, component-based development, using the CSS cascade to full effect via the logical import order of CSS partials. This approach is backend-agnostic, which is great for company-wide consistency.
+
+Inline media queries are favoured, as this keeps components truly modular and far easier to maintain than defining separate stylesheets for each breakpoint.
+
+This readme explains the key components of the new architecture and style guide. This guide is intended to be easy to modify, scale, evolve, and adapt, so your thoughts, concerns, and recommendations are appreciated (and requested). I don't want anyone to feel forced to use this, but it should be immediately apparent that this is a great way to work.
+
+This process will work with Sass, Less, or even plain CSS (if you're mental). I've used Sass (and .scss) in the information below.
 
 ##Contents
 1. [Asset folder structure](#asset-folder-structure)
@@ -413,7 +419,7 @@ i.e. Don't do this:
         }
     }
 
-Which comiles to the overly-specific
+Which compiles to the overly-specific
 
     .nav--primary .nav--primary__menu .nav--primary__item {
         color: red;
