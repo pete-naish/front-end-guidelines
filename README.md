@@ -2,10 +2,11 @@
 This project introduces a comprehensive new style guide (CSS only, at the moment - HTML and JS to follow) and CSS architecture that **front-end devs should use in all projects going forwards**.
 
 ####Key benefits:####
-
 Allows for mobile-first, component-based development, using the CSS cascade to full effect via the logical import order of CSS partials. This approach is backend-agnostic, which is great for company-wide consistency.
 
 Inline media queries are favoured, as this keeps components truly modular and far easier to maintain than defining separate stylesheets for each breakpoint.
+
+- - -
 
 This readme explains the key components of the new architecture and style guide. This guide is intended to be easy to modify, scale, evolve, and adapt, so your thoughts, concerns, and recommendations are appreciated (and requested). I don't want anyone to feel forced to use this, but it should be immediately apparent that this is a great way to work.
 
