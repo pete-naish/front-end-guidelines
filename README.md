@@ -1,4 +1,6 @@
-#About this project
+#Front-end developer guidelines
+
+##About this project
 This project introduces a comprehensive new style guide and CSS architecture that front-end devs should **use in all projects going forwards**.
 
 The style guide section currently only covers CSS, and will be extended to include HTML and JavaScript in the future. This project will soon be set up in such a way that it can be downloaded and used to kick-start new projects.
@@ -9,7 +11,7 @@ I'm sure you'll agree that we're in need of a bit of consistency regarding front
 
 This may sound like a framework itself, but it's more of a folder structure and set of guidelines. It does however include the mixin library that Benn and I have put together, but this aims to include only useful features that the majority of projects are likely to use. You're free to add your own project-specific tools, if you wish.
 
-####Key benefits:####
+###Key benefits:
 Allows for mobile-first, component-based development.
 
 Uses the CSS cascade to full effect via the logical import order of CSS partials.
