@@ -23,7 +23,9 @@ nbproject
 *.sublime-workspace
 
 assets/css/*.css
-assets/js/*.min.js
+!assets/css/*.min.css
+
 converted-html
 .jshintrc
 .scss-lint.yml
+.ftpsettings

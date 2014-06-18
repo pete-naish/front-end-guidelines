@@ -90,12 +90,12 @@ This may sound like a framework itself, but it's more of a folder structure and 
     |   |   +-- objects
     |   |   |   |
     |   |   |   +-- _all.scss
-    |   |   |   +-- _accordion.scss
     |   |   |   +-- _buttons.scss
     |   |   |
     |   |   +-- components
     |   |   |   |
     |   |   |   +-- _all.scss
+    |   |   |   +-- _nav--primary.scss
     |   |   |
     |   |   +-- trumps
     |   |   |   |
@@ -337,7 +337,7 @@ Object and Component partials should match the main class name that they referen
 Compiled CSS files should be added to `.gitignore`.
 
 #### Writing rules
-- **Write CSS mobile-first**
+- Write CSS mobile-first
 - Do not use IDs (unless you're overriding something a CMS has spat out, and you can't add a class to the element).
 
 
@@ -431,7 +431,7 @@ i.e. Don't do this:
         }
     }
 
-Which compiles to the overly-specific
+Which compiles to the overly specific:
 
     .nav--primary .nav--primary__menu .nav--primary__item {
         color: red;
@@ -464,6 +464,10 @@ Having sensible classes on every possible element within a component allows you 
 It may not always be possible to have that level of control, however, so you can fall back to targeting a parent class and plain HTML elements, e.g.:
 
     .nav--primary li {
+        
+    }
+
+    .nav--primary a {
         
     }
 
