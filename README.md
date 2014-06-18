@@ -105,45 +105,55 @@ This may sound like a framework itself, but it's more of a folder structure and 
     |   |   |
     |   |   +-- app.scss
     |   |
-    |   +-- app.css
-    |   +-- app.min.css
+    |   +-- app.css // blank example file
+    |   +-- app.min.css // blank example file
     |
-    +-- img
+    +-- img // contains blank example files
     |   |
     |   +-- frame
     |   |   |
-    |   |   +-- logo--brand.png
+    |   |   +-- logo--client.png
     |   |
     |   +-- content
     |   |   |
-    |   |   +-- placeholder-image--carousel--primary.jpg
+    |   |   +-- placeholder-image--rte.jpg
     |
     +-- js
     |   |
-    |   +-- vendor
+    |   +-- vendor // contains blank example files
     |   |   |
     |   |   +-- jquery--1.11.0.min.js
     |   |   +-- jquery__bxslider--4.1.2.min.js
     |   |
     |   +-- .jshintrc
-    |   +-- app.js
-    |   +-- app.min.js
+    |   +-- app.js // blank example file
+    |   +-- app.min.js // blank example file
     |
-    +-- type
+    +-- type // contains blank example files
     |   |
     |   +-- project-icons.eot
     |   +-- project-icons.svg
     |   +-- project-icons.ttf
     |   +-- project-icons.woff
-    |   +-- selection.json
+    |   +-- selection.json (non-blank example file)
     |
+    +-- .gitattributes
+    +-- .gitignore
+    +-- README.md
 
 ### <a name="general"></a>General
 All folder names should be lowercase, and use hyphens, underscores, or periods instead of spaces.
 
 If you're using Mixture, converted HTML should be added to `.gitignore`.
 
-Compiled CSS and custom, minified JavaScript should also be added to `.gitignore`. This is to avoid potential merge conflicts and large diffs.
+Compiled, minified CSS and custom, minified JavaScript should be added to `.gitattributes` as binary files, e.g.
+
+    assets/css/*.min.css binary
+    assets/js/*.min.js binary
+
+This is to avoid potential merge conflicts and large diffs.
+
+Compiled but non-minified CSS should be added to `.gitignore`. This is to keep it out of the repository and prevent backend from mistakenly editing the CSS directly.
 
 #### Naming
 All assets and classes should be lowercase (no camelCase), and use a [BEM](http://bem.info/) (ish) naming convention which goes from general to specific:
@@ -334,7 +344,11 @@ Sass partials should be prefixed with an underscore.
 
 Object and Component partials should match the main class name that they reference, e.g `_nav--primary.scss`.
 
-Compiled CSS files should be added to `.gitignore`.
+Compiled, minified CSS should be added to `.gitattributes` as binary files, e.g.
+
+    assets/css/*.min.css binary
+
+Compiled but non-minified CSS should be added to `.gitignore`. This is to keep it out of the repository and prevent backend from mistakenly editing the CSS directly.
 
 #### Writing rules
 - Write CSS mobile-first
