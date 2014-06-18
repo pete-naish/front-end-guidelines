@@ -12,15 +12,11 @@ I'm sure you'll agree that we're in need of a bit of consistency regarding front
 This may sound like a framework itself, but it's more of a folder structure and set of guidelines. It does however include the mixin library that Benn and I have put together, but this aims to include only useful features that the majority of projects are likely to use. You're free to add your own project-specific tools, if you wish.
 
 ###Key benefits:
-Allows for mobile-first, component-based development.
-
-Uses the CSS cascade to full effect via the logical import order of CSS partials.
-
-Backend-agnostic, which is great for company-wide consistency.
-
-Easy to maintain and scale through consistent structure and simple, modular CSS partials with inline media queries, rather than separate stylesheets for each breakpoint.
-
-Works with Sass, Less, or even plain CSS (if you're mental). I've used Sass (and .scss) in the information below.
+- Allows for mobile-first, component-based development.
+- Uses the CSS cascade to full effect via the logical import order of CSS partials.
+- Backend-agnostic, which is great for company-wide consistency.
+- Easy to maintain and scale through consistent structure and simple, modular CSS partials with inline media queries, rather than separate stylesheets for each breakpoint.
+- Works with Sass, Less, or even plain CSS (if you're mental). I've used Sass (and .scss) in the information below.
 
 ##Contents
 1. [Asset folder structure](#asset-folder-structure)
