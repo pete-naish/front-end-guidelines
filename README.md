@@ -337,14 +337,16 @@ Object and Component partials should match the main class name that they referen
 Compiled CSS files should be added to `.gitignore`.
 
 #### Writing rules
-- **Write CSS mobile-first!**
-- Do not use IDs (unless you're overriding something a CMS has spat out, and you can't add a class to the element). 
+- **Write CSS mobile-first**
+- Do not use IDs (unless you're overriding something a CMS has spat out, and you can't add a class to the element).
+
+
 - One selector per line
 - Put a single space before `{`
 - Put a single space after `:`
 - No space before `;`
 - Use `;` after every declaration
-- Separate rules by new lines, except when rules are nested
+- Separate rules by blank lines, except when rules are nested
 - Use (short) hex color codes `#000` or rgba
 - Use shorthand notation where possible
 - Use `//` for comments
@@ -400,6 +402,9 @@ Declare styles in this order
         }
         @media-query(desktop) {
             font-size: em(22px);
+            p {
+                color: #f0f;
+            }
         }
     }
 
@@ -408,7 +413,7 @@ Declare styles in this order
     }
 
 #### Nesting
-Nesting should be kept to a minimum. It's fine to nest component CSS where it makes sense, but think about the compiled CSS, and only nest as deep as you'd be comfortable with if you were to write out the full selector in plain CSS.
+Nesting should be kept to a minimum. It's fine to nest component CSS where it makes sense, but think about the compiled CSS, and only nest as deep as you would if you were to write out the full selector in plain CSS.
 
 i.e. Don't do this:
 
@@ -463,3 +468,5 @@ It may not always be possible to have that level of control, however, so you can
     }
 
 Writing your CSS in this way, though, will naturally result in more nested styles.
+
+If you're using this style, it can be a good idea to tightly scope your selectors using the `>` direct child selector.
