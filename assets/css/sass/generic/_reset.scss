@@ -49,19 +49,27 @@ dfn[title] {
 
 // Give form elements some cursor interactions...
 
+input[type=button],
+input[type=submit],
+input[type='reset'],
 label,
-input,
-textarea,
 button,
 select,
 option {
     cursor:pointer;
 }
 
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=search],
+input[type=number],
+textarea,
 textarea:active,
 textarea:focus {
-    cursor:text;
-    outline:none;
+    cursor: text;
 }
 
 // Remove underlines from potentially troublesome elements.
@@ -70,12 +78,6 @@ a,
 u,
 ins {
     text-decoration: none;
-}
-
-// Apply faux underline via `border-bottom`.
-
-ins {
-    border-bottom: 1px solid;
 }
 
 // So that `alt` text is visually offset if images don’t load.

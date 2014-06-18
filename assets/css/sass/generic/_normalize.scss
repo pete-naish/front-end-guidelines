@@ -42,13 +42,11 @@ audio:not([controls]) {
 
 // Base
 
-// 1. Sets default font family to sans-serif.
-// 2. Prevents iOS text size adjust after orientation change, without disabling user zoom.
+// 1. Prevents iOS text size adjust after orientation change, without disabling user zoom.
 
 html {
-    font-family: sans-serif; // [1]
-    -webkit-text-size-adjust: 100%; // [2]
-    -ms-text-size-adjust: 100%; // [2]
+    -webkit-text-size-adjust: 100%; // [1]
+    -ms-text-size-adjust: 100%; // [1]
 }
 
 // Removes default margin.
@@ -74,12 +72,6 @@ a:hover {
 
 // Typography
 
-// Addresses `h1` font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome.
-
-h1 {
-    font-size: 2em;
-}
-
 // Addresses styling not present in IE 8/9, Safari 5, and Chrome.
 
 abbr[title] {
@@ -97,13 +89,6 @@ strong {
 
 dfn {
     font-style: italic;
-}
-
-// Addresses styling not present in IE 8/9.
-
-mark {
-    background: #ff0;
-    color: #000;
 }
 
 // Corrects font family set oddly in Safari 5 and Chrome.
@@ -223,16 +208,14 @@ input[type='submit'] {
 
 button[disabled],
 input[disabled] {
-    cursor: default;
+    cursor: not-allowed;
 }
 
-// 1. Addresses box sizing set to `content-box` in IE 8/9.
-// 2. Removes excess padding in IE 8/9.
+// 1. Removes excess padding in IE 8/9.
 
 input[type='checkbox'],
 input[type='radio'] {
-    box-sizing: border-box; // [1]
-    padding: 0; // [2]
+    padding: 0; // [1]
 }
 
 // 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
