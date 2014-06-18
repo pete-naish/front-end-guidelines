@@ -1,33 +1,33 @@
 // #TYPE
 
-@import '../tools/css3/font-face';
+// @import '../tools/css3/font-face';
 
-@include font-face(project-icons, '../type/project-icon');
+// @include font-face(project-icons, '../type/project-icon');
 
-@mixin project-icon($icon-name) {
-    font-family: 'project-icons' !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+// @mixin project-icon($icon-name) {
+//     font-family: 'project-icons' !important;
+//     font-style: normal !important;
+//     font-weight: normal !important;
+//     font-variant: normal !important;
+//     text-transform: none !important;
+//     speak: none;
+//     line-height: 1;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
 
-    @if $icon-name == arrow-up {
-        content: 'u';
-    }
+//     @if $icon-name == arrow-up {
+//         content: 'u';
+//     }
 
-    @if $icon-name == arrow-right {
-        content: 'r';
-    }
+//     @if $icon-name == arrow-right {
+//         content: 'r';
+//     }
 
-    @if $icon-name == arrow-down {
-        content: 'd';
-    }
+//     @if $icon-name == arrow-down {
+//         content: 'd';
+//     }
 
-    @if $icon-name == arrow-left {
-        content: 'l';
-    }
-}
+//     @if $icon-name == arrow-left {
+//         content: 'l';
+//     }
+// }

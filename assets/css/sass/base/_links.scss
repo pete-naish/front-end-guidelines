@@ -3,34 +3,34 @@
 
 .link--dark,
 %link--dark {
-    color: $base--text-color;
+    // color: $base--text-color;
     &:hover,
     &:active,
     &:focus {
-        color: $base--brand-color;
+        // color: $base--brand-color;
     }
 }
 
 .link--inverted,
 %link--inverted {
-    color: #fff;
+    // color: #fff;
     &:hover,
     &:active,
     &:focus {
-        color: $base--brand-color;
+        // color: $base--brand-color;
     }
 }
 
 .link--bright,
 %link--bright {
-    color: $base--brand-color;
+    // color: $base--brand-color;
     &:hover,
     &:active,
     &:focus {
-        color: $base--text-color;
+        // color: $base--text-color;
     }
 }
 
 p a {
-    @extend %link--bright;
+    // @extend %link--bright;
 }

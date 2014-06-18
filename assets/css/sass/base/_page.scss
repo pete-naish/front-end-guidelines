@@ -4,16 +4,9 @@
 // 1. One off bits of maths to get our base font size in ems and our base line height in a unitless value.
 
 html {
-    font-size: ($base--font-size / 16px) +em; // [1]
-    line-height: $base--line-height / $base--font-size; // [1]
-    color: $base--text-color;
+
 }
 
-li {
-    list-style: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
+body {
+	
 }

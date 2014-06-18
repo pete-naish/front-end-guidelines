@@ -1,44 +1,14 @@
 .button--naked,
 %button--naked {
-    @include prefix(text-shadow, 0 0 1px rgba($base--text-color, .2));
-    outline: none;
-    background: none;
-    -webkit-appearance: none;
-    padding: 0;
-    border: 0;
-    color: $base--text-color;
-    font-family: $fogerty--solid;
-    line-height: 1;
-}
 
-.button--naked__no-text,
-%button--naked__no-text {
-    @include prefix(text-shadow, 0 0 1px rgba($base--text-color, .2));
-    outline: none;
-    background: none;
-    -webkit-appearance: none;
-    padding: 0;
-    border: 0;
-    line-height: 1;
 }
-
 
 .button--bright,
 %button--bright {
     @extend %button--naked;
-    @include prefix(transition, all .2s ease-out);
-    color: #fff;
-    background: $base--brand-color;
     &:hover,
     &:active,
     &:focus {
-        background: darken($base--brand-color, 10%);
+        
     }
-}
-
-input[type=submit] {
-    @extend %button--bright;
-    border-radius: 0;
-    padding: 13px 20px;
-    font-size: em(18px);
 }

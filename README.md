@@ -1,16 +1,24 @@
 #About this project
-This project introduces a comprehensive new style guide (CSS only, at the moment - HTML and JS to follow) and CSS architecture that **front-end devs should use in all projects going forwards**.
+This project introduces a comprehensive new style guide and CSS architecture that front-end devs should **use in all projects going forwards**.
+
+The style guide section currently only covers CSS, and will be extended to include HTML and JavaScript in the future. This project will soon be set up in such a way that it can be downloaded and used to kick-start new projects.
+
+This process is intended to be easy to modify, scale, evolve, and adapt, so your thoughts, concerns, and recommendations are appreciated (and requested). I don't want anyone to feel forced to use this, but it should be immediately apparent that it is a great way to work.
+
+I'm sure you'll agree that we're in need of a bit of consistency regarding front-end code quality and project setup, especially since we are truly global now. Ideally we want to move away from frameworks such as Bootstrap and Foundation; they may be great for prototyping, but I find they interfere too much, and bloat a full website build.
+
+This may sound like a framework itself, but it's more of a folder structure and set of guidelines. It does however include the mixin library that Benn and I have put together, but this aims to include only useful features that the majority of projects are likely to use. You're free to add your own project-specific tools, if you wish.
 
 ####Key benefits:####
-Allows for mobile-first, component-based development, using the CSS cascade to full effect via the logical import order of CSS partials. This approach is backend-agnostic, which is great for company-wide consistency.
+Allows for mobile-first, component-based development.
 
-Inline media queries are favoured, as this keeps components truly modular and far easier to maintain than defining separate stylesheets for each breakpoint.
+Uses the CSS cascade to full effect via the logical import order of CSS partials.
 
-- - -
+Backend-agnostic, which is great for company-wide consistency.
 
-This readme explains the key components of the new architecture and style guide. This guide is intended to be easy to modify, scale, evolve, and adapt, so your thoughts, concerns, and recommendations are appreciated (and requested). I don't want anyone to feel forced to use this, but it should be immediately apparent that this is a great way to work.
+Easy to maintain and scale through consistent structure and simple, modular CSS partials with inline media queries, rather than separate stylesheets for each breakpoint.
 
-This process will work with Sass, Less, or even plain CSS (if you're mental). I've used Sass (and .scss) in the information below.
+Works with Sass, Less, or even plain CSS (if you're mental). I've used Sass (and .scss) in the information below.
 
 ##Contents
 1. [Asset folder structure](#asset-folder-structure)
