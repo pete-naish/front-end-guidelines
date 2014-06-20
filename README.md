@@ -135,7 +135,7 @@ This may sound like a framework itself, but it's more of a folder structure and 
     |   +-- project-icons.svg
     |   +-- project-icons.ttf
     |   +-- project-icons.woff
-    |   +-- selection.json (non-blank example file)
+    |   +-- selection.json // non-blank example file
     |
     +-- .gitattributes
     +-- .gitignore
@@ -216,7 +216,7 @@ e.g.
 ### <a name="javascript"></a>JavaScript
 Third-party JavaScript files should be minified and placed inside `/assets/js/vendor`.
 
-Custom JavaScript is written in `/assets/js/app.js`, which is minified as `/assets/js/app.min.js` (add this to `.gitignore`, remember).
+Custom JavaScript is written in `/assets/js/app.js`, which is minified as `/assets/js/app.min.js` (add this to `.gitattributes` as `binary`, remember).
 
 Custom JavaScript should be checked with [JSHint](http://www.jshint.com/install/) or similar. [Sublime Text](http://www.sublimetext.com/) has a JSHint plugin available, which allows you to create a per-project `.jshintrc` configuration file that should be added to your project's `.gitignore`.
 
